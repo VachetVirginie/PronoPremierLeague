@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -46,10 +50,16 @@ $conn->close();
 
 ?>
 
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"/>
+<br>
+<p>
 
+</p>
+</header>
 
 <body>
-    <div id="match">
+    <div id="match" style="text-align:center">
 
     </div>
     
@@ -66,7 +76,7 @@ $conn->close();
 
             for (let journée of objet.rounds) {
                 let h2 = document.createElement('h2');
-                let journee = '<h2> ' + journée.name + '</h2>';
+                let journee = '<h2 class="jumbotron text-center"> ' + journée.name + '</h2>';
                 h2.innerHTML = journee;
                 div.appendChild(h2);
 
@@ -80,7 +90,7 @@ $conn->close();
                     div.appendChild(p);
 
                     let article = document.createElement('article');
-                    let result = '<article> <form method="POST" action="add.php">' + 1 + "N" + 2 + '<input type="text" name="nom" size="20" value="1/N/2" maxlength="35" >' + "pseudo" + '<input type="text" name="pseudo" size="20" value="pseudo" maxlength="35" >' + '<INPUT TYPE="submit" NAME="ok" > </form></article>';
+                    let result = '<article> <form method="POST" action="add.php">'  + '<input type="text" name="nom" size="20" value="1/N/2" maxlength="35" >'  + '<input type="text" name="pseudo" size="20" value="pseudo" maxlength="35" >' + '<INPUT TYPE="submit" NAME="ok" > </form></article><br>';
                     article.innerHTML = result;
                     div.appendChild(article);
 
