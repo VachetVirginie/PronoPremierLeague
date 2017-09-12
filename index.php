@@ -90,7 +90,8 @@ $conn->close();
                     div.appendChild(p);
 
                     let article = document.createElement('article');
-                    let result = '<article> <form method="POST" action="add.php">'  + '<input type="text" name="nom" size="20" value="1/N/2" maxlength="35" >'  + '<input type="text" name="pseudo" size="20" value="pseudo" maxlength="35" >' + '<INPUT TYPE="submit" NAME="ok" > </form></article><br>';
+                    let result = '<article> <form method="POST" action="add.php">'+ '<input type="hidden" name="equipe1" value="'+match_journée.team1.name+'"/>'+'<input type="hidden" name="equipe2" value="'+match_journée.team2.name+'"/>' +'<input type="hidden" name="date" value="'+match_journée.date+'"/>' +'<input type="text" name="nom" size="20" value="1/N/2" maxlength="35" >'  + '<input type="text" name="pseudo" size="20" value="pseudo" maxlength="35" >' + '<INPUT TYPE="submit" NAME="ok" > </form></article><br>';
+                    //'<input type="hidden" name="equipe1" value="'+match_journée.team2.name+'"/>';
                     article.innerHTML = result;
                     div.appendChild(article);
 
